@@ -29,5 +29,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'import/no-extraneous-dependencies': 'off',
     'no-unused-vars': 'off',
+    'jsx-a11y/control-has-associated-label': 'off',
   },
 };
