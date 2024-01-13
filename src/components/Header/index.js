@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaHome, FaSignInAlt, FaUserAlt } from 'react-icons/fa';
 import { Nav } from './styles';
 
 function Header() {
   return (
     <Nav>
-      <a href="/">
+      <Link to="/">
         <FaHome size={21} />
-      </a>
-      <a href="/">
+      </Link>
+      <Link to="/login">
         <FaUserAlt size={18} />
-      </a>
-      <a href="/">
+      </Link>
+      <Link to="/asd">
         <FaSignInAlt size={20} />
-      </a>
+      </Link>
     </Nav>
   );
 }
