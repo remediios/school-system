@@ -12,7 +12,7 @@ function Header() {
       <Link to="/login">
         <FaUserAlt size={18} />
       </Link>
-      <Link to="/asd">
+      <Link to="/logout">
         <FaSignInAlt size={20} />
       </Link>
     </Nav>
