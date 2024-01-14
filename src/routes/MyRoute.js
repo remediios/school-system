@@ -8,7 +8,10 @@ function MyRoute({ component: Component, isPrivate, ...rest }) {
   if (isPrivate && !isLogged) {
     return (
       <Redirect
-        to={{ pathname: '/login', state: { prevPath: rest.location.pathname } }}
+        to={{
+          pathname: '/sign-in',
+          state: { prevPath: rest.location.pathname },
+        }}
       />
     );
   }
