@@ -4,9 +4,9 @@ import * as actions from './actions';
 import * as types from '../types';
 
 const request = () =>
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     setTimeout(() => {
-      reject();
+      resolve();
     }, 600);
   });
 
