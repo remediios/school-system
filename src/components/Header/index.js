@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { Nav } from './styles';
 
 function Header() {
-  const clickedButton = useSelector((state) => state.clickedButton);
+  const clickedButton = useSelector((state) => state.example.clickedButton);
   return (
     <Nav>
       <Link to="/">
