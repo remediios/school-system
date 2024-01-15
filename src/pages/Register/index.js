@@ -26,7 +26,7 @@ function Register() {
       toast.error('Invalid email address');
     }
 
-    if (password.length < 6 || name.length > 50) {
+    if (password.length < 6 || password.length > 50) {
       formErrors = true;
       toast.error('Password must be between 6 and 50 characters');
     }

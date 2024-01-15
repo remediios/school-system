@@ -32,5 +32,6 @@ module.exports = {
     'jsx-a11y/control-has-associated-label': 'off',
     'func-names': 'off',
     'no-useless-return': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
   },
 };

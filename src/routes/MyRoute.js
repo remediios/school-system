@@ -1,9 +1,10 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 
 function MyRoute({ component: Component, isPrivate, ...rest }) {
-  const isLogged = false;
+  const isLogged = useSelector((state) => state.auth.isLogged);
 
   if (isPrivate && !isLogged) {
     return (

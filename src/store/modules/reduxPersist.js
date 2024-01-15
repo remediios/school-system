@@ -6,7 +6,7 @@ export default (reducers) => {
     {
       key: 'SCHOOL-SYSTEM',
       storage,
-      whitelist: ['example'], // check rootReducer object keys
+      whitelist: ['auth'], // check rootReducer object keys
     },
     reducers,
   );
