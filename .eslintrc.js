@@ -31,5 +31,6 @@ module.exports = {
     'no-unused-vars': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
     'func-names': 'off',
+    'no-useless-return': 'off',
   },
 };
