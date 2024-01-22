@@ -11,7 +11,11 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case types.SIGNIN_REQUEST: {
-      return state;
+      const newState = {
+        ...state,
+        isLoading: true,
+      };
+      return newState;
     }
     case types.SIGNIN_SUCCESS: {
       const newState = {
@@ -19,6 +23,7 @@ export default function (state = initialState, action) {
         isLogged: true,
         token: action.payload.token,
         user: action.payload.user,
+        isLoading: false,
       };
       return newState;
     }

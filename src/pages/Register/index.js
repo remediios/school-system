@@ -6,11 +6,13 @@ import { Container } from '../../styles/GlobalStyles';
 import { Form } from './styled';
 import axios from '../../services/axios';
 import history from '../../services/history';
+import Loading from '../../components/Loading';
 
 function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,19 +34,22 @@ function Register() {
     }
 
     if (formErrors) return;
-
+    setIsLoading(true);
     try {
       await axios.post('/users/', { name, password, email });
       toast.success('Your account has been created!');
+      setIsLoading(false);
       history.push('/sign-in');
     } catch (err) {
       const errors = get(err, 'response.data.errors', []);
       errors.map((error) => toast.error(error));
+      setIsLoading(false);
     }
   };
 
   return (
     <Container>
+      <Loading isLoading={isLoading} />
       <h1>Create your account</h1>
       <Form onSubmit={handleSubmit}>
         <label htmlFor="name">
