@@ -32,6 +32,40 @@ export default function (state = initialState, action) {
       return newState;
     }
 
+    case types.REGISTER_REQUEST: {
+      const newState = {
+        ...state,
+        isLoading: true,
+      };
+      return newState;
+    }
+    case types.REGISTER_UPDATED_SUCCESS: {
+      const newState = {
+        ...state,
+        user: {
+          ...state.user,
+          name: action.payload.name,
+          email: action.payload.email,
+        },
+        isLoading: false,
+      };
+      return newState;
+    }
+    case types.REGISTER_CREATED_SUCCESS: {
+      const newState = {
+        ...state,
+        isLoading: false,
+      };
+      return newState;
+    }
+    case types.REGISTER_FAILURE: {
+      const newState = {
+        ...state,
+        isLoading: false,
+      };
+      return newState;
+    }
+
     default:
       return state;
   }
