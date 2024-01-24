@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LoadingSpin from 'react-loading-spin';
 import { Container } from './styled';
 
 function Loading({ isLoading }) {
@@ -8,7 +9,7 @@ function Loading({ isLoading }) {
   return (
     <Container>
       <div />
-      <span>Loading...</span>
+      <LoadingSpin primaryColor="crimson" />
     </Container>
   );
 }
