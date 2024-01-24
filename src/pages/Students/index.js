@@ -6,7 +6,12 @@ import { FaUserCircle, FaEdit, FaTrash, FaExclamation } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import axios from '../../services/axios';
 import { Container } from '../../styles/GlobalStyles';
-import { ProfilePicture, StudentContainer, StudentRow } from './styled';
+import {
+  NewStudent,
+  ProfilePicture,
+  StudentContainer,
+  StudentRow,
+} from './styled';
 import Loading from '../../components/Loading';
 
 function Students() {
@@ -56,6 +61,7 @@ function Students() {
     <Container>
       <Loading isLoading={isLoading} />
       <h1>Students</h1>
+      <NewStudent to="/student/">New Student</NewStudent>
       <StudentContainer>
         {students &&
           students.map((student, index) => (
