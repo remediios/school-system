@@ -29,4 +29,38 @@ export const Form = styled.form`
   button {
     margin-top: 10px;
   }
+
+`;
+
+export const Title = styled.h1`
+  text-align: center;
+`;
+
+export const ProfilePicture = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 10px;
+  position: relative;
+  margin-top: 20px;
+
+  img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: ${colors.primaryColor};
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
 `;
